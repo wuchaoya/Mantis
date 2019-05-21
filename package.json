@@ -3,19 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "cross-env APP_TYPE=localhost vue-cli-service serve",
+    "dev": "cross-env APP_TYPE=dev vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.11.2",
     "core-js": "^2.6.5",
+    "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "muse-ui": "^3.0.2",
+    "postcss-aspect-ratio-mini": "^1.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-px-to-viewport": "^1.1.0",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1",
+    "qs": "^6.7.0",
     "register-service-worker": "^1.6.2",
+    "style-vw-loader": "^1.0.2",
+    "vconsole": "^3.3.0",
     "vue": "^2.6.10",
+    "vue-axios": "^2.1.4",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuetypescript-pxtransformationvw-loader": "^1.0.0",
+    "vuex": "^3.0.1",
+    "webpack-api-mocker": "^1.6.6"
   },
   "devDependencies": {
     "@types/chai": "^4.1.0",
@@ -28,14 +46,33 @@
     "@vue/cli-service": "^3.7.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "chai": "^4.1.2",
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.5.21"
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "postcss-write-svg": {
+        "utf8": false
+      },
+      "postcss-px-to-viewport": {
+        "viewportWidth": 350,
+        "unitPrecision": 3,
+        "viewportUnit": "vw",
+        "selectorBlackList": [
+          ".ignore",
+          ".hairlines"
+        ],
+        "minPixelValue": 1,
+        "mediaQuery": false
+      },
+      "postcss-viewport-units": {},
+      "cssnano": {
+        "preset": "advanced",
+        "autoprefixer": false,
+        "postcss-zindex": false
+      }
     }
   },
   "browserslist": [
