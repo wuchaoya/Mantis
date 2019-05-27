@@ -5,7 +5,11 @@ const path = require('path')
 
 const host = {
 	dev: 'http://cloud-phone-dev.xiaoyaoyou.com:2096',
-	localhost: 'http://127.0.0.1:8080/api'
+	localhost: 'http://127.0.0.1:8080/api',
+}
+
+const ucHost = {
+	dev: 'http://sdk-api-dev.haimawan.com/user_server/from_client'
 }
 
 
@@ -34,6 +38,10 @@ const config = process.env.APP_TYPE === 'localhost' ?
 				'/api': {
 					target: host[process.env.APP_TYPE],
 					pathRewrite:{'/api':''}
+				},
+				'/uc': {
+					target: ucHost[process.env.APP_TYPE],
+					pathRewrite:{'/uc':''}
 				},
 			}
 		},

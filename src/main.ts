@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
-import  '@/utils/debug';
+//import  '@/utils/debug';
+import './main.less';
 
 
 Vue.use(VueAxios, axios)

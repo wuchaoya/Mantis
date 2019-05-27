@@ -9,8 +9,8 @@ export default class Home extends Vue {
     super(props)
   }
   
-  events () {
-    console.log('传入一个方法')
+  async mounted () {
+    console.log(this.$store)
   }
   
   render () {

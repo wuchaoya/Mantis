@@ -47,6 +47,14 @@ yarn add postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg post
 
 想做一个icon 库，将icon单独独立出来，想在是封装了一个icon的组件。
 
+
+### 调试
+
+```
+sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+
+```
+
 ```
  yarn start  // 启动本地服务，接口连接本地mock数据
  

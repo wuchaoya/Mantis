@@ -2,9 +2,17 @@ import {Vue, Component} from 'vue-property-decorator';
 import Icon from '@/components/Icon';
 import './style.less';
 
+
 @Component({
   props: {
-    type: String,
+    type: {
+      default: 'text',
+      required: false,
+      validator: (value) => {
+        // 这个值必须匹配下列字符串中的一个
+        return ['password', 'text'].indexOf(value) !== -1
+      }
+    },
     placeholder: String,
     iconName: String
   }

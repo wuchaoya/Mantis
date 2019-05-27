@@ -6,6 +6,7 @@ import Headline from '@/components/Headline';
 import Button from '@/components/Button';
 
 import { initialize } from '@/services/api';
+import {login} from '@/services/accountRelated';
 
 @Component({
   props: {
@@ -21,12 +22,17 @@ export default class SignIn extends Vue {
   }
   
   async mounted () {
+    console.log(this.$store)
     await initialize({})
+    await login({
+      account:'18695912990',
+      password:'123456',
+    })
   }
   
   render () {
     return (
-      <div>
+      <div class='card'>
         <Navigation title='登录' right={<span class='text'>注册</span>}/>
         <Logo size={80} margin='36px'/>
         <Input iconName='signIn' placeholder='请输入您的账号' />
