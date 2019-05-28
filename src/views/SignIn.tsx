@@ -1,12 +1,10 @@
 import { Vue, Component } from 'vue-property-decorator';
-import Navigation from '@/components/Navigation';
-import Logo from '@/components/Logo';
-import Input from '@/components/Input';
-import Headline from '@/components/Headline';
-import Button from '@/components/Button';
-
+import { Observer } from "mobx-vue";
+import ViewModel from "@/store/store";
 import { initialize } from '@/services/api';
+import Container from '../components/Test/index'
 
+@Observer
 @Component({
   props: {
     name: String,
@@ -19,20 +17,18 @@ export default class SignIn extends Vue {
   constructor (props : any) {
     super(props)
   }
-  
+  state = new ViewModel()
   async mounted () {
     await initialize({})
+    this.state.setAge()
+    console.log(this.state.age)
   }
   
   render () {
     return (
       <div>
-        <Navigation title='登录' right={<span class='text'>注册</span>}/>
-        <Logo size={80} margin='36px'/>
-        <Input iconName='signIn' placeholder='请输入您的账号' />
-        <Input iconName='passWord' type='password' placeholder='请输入您的密码' />
-        <Headline />
-        <Button>登录</Button>
+        <Container>HAHA</Container> 
+        <div onClick={() => this.state.setAge()}></div>
       </div>
     )
   }

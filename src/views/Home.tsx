@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import Drawer from '@/components/Drawer/index.vue';
-import UserInfo from '@/components/UserInfo';
+import Button from '@/components/Test'
 
 @Component({
   components: {
@@ -19,6 +18,7 @@ export default class Home extends Vue {
     return (
       <div class='home'>
         首页
+        <Button>HAHA</Button> 
       </div>
     )
   }
