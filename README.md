@@ -48,6 +48,17 @@ yarn add postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg post
 想做一个icon 库，将icon单独独立出来，想在是封装了一个icon的组件。
 
 
+### vue css 莫名丢失前缀问题
+
+vue cli 创建的工程自带了css前缀， 后续增加 px 转换 vw vh 将packjson中 autoprefixer 给丢了
+
+```
+"plugins" : {
+      "autoprefixer": {},
+      }
+```
+
+
 ### 调试
 
 ```

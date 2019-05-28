@@ -54,6 +54,7 @@
   },
   "postcss": {
     "plugins": {
+      "autoprefixer": {},
       "postcss-write-svg": {
         "utf8": false
       },
