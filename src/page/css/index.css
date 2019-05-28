@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+}
+
+.container-top {
+    background: #120e1c;
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+}
+
+.container-bottom {
+    background: #fff;
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+}
+
+.log {
+    position: absolute;
+    width: 30vw;
+    z-index: 1;
+    left: 5vw;
+    top: 5vw;
+}
+
+.background {
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    margin-top: -80vw;
+}
