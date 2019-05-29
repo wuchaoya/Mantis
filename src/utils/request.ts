@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 const codeMessage = {
   200: '服务器成功返回请求的数据。',
   201: '新建或修改数据成功。',

@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
-//import  '@/utils/debug';
+import  '@/utils/debug';
 import '@/style/reset.less';
 import '@/style/main.less';
 
