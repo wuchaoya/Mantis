@@ -6,7 +6,8 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 //import  '@/utils/debug';
-import './main.less';
+import '@/style/reset.less';
+import '@/style/main.less';
 
 
 Vue.use(VueAxios, axios)

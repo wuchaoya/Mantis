@@ -194,6 +194,8 @@ export default class Icons extends tsx.Component<IIconProps> {
         return this.deviceNumber()
       case 'me' :
         return this.me()
+      case 'msg' :
+        return this.msg()
     }
   }
 }

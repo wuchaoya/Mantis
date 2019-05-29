@@ -9,6 +9,7 @@ interface IIconProps {
   color?: string,
   styles?: object,
   backgroundColor?: string,
+  click?: any
 }
 
 @Component
@@ -19,10 +20,11 @@ export default class Icon extends tsx.Component<IIconProps> {
   @Prop() public color!: string;
   @Prop() public styles!: object;
   @Prop() public backgroundColor!: string;
+  @Prop({default: () => {}}) public click!: any;
   
   render () {
     return (
-      <div class='icon-container' style={this.$props.styles}>
+      <div onClick={ () => this.$props.click ()} class='icon-container' style={this.$props.styles}>
         <Icons name={this.$props.name}/>
       </div>
     )
