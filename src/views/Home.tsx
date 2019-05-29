@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import Drawer from '@/components/Drawer/index.vue';
-import UserInfo from '@/components/UserInfo';
+import SigninStory from '@/store/SigninStore';
+
 
 @Component({
   components: {
@@ -9,16 +9,16 @@ import UserInfo from '@/components/UserInfo';
 })
 export default class Home extends Vue {
   
+  state = SigninStory
+  
   mounted () {
-    Vue.axios.get('/api/user').then((response) => {
-      console.log(response.data)
-    })
+    console.log(this)
   }
   
   render () {
     return (
       <div class='home'>
-        首页
+        首页{this.state.accountInfo.password}
       </div>
     )
   }

@@ -1,25 +1,20 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component, Prop} from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
+
 import './style.less';
 
-@Component({
-  props: {
-    description: {
-      default: '暂无数据',
-      required: false,
-      type: String
-    },
-    imageStyle: Object,
-    image: {
-      default: require('@/assets/img/emtpy.png'),
-      required: false,
-    },
-  }
-})
-export default class Empty  extends Vue {
+interface IEmptyProps {
+  description?: string,
+  imageStyle?: object,
+  image?: any
+}
+
+@Component
+export default class Empty  extends tsx.Component<IEmptyProps> {
   
-  constructor(props: any) {
-    super(props)
-  }
+  @Prop({default: '暂无数据'}) public ndescription!: string;
+  @Prop() public imageStyle!: object;
+  @Prop({default: require('@/assets/img/emtpy.png')}) public image!: any;
   
   mounted () {
     console.log(this.$props)

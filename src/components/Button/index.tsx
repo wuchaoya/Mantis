@@ -1,23 +1,24 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component, Prop} from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
+
 import './style.less';
 
-@Component({
-  props: {}
-})
-export default class Button  extends Vue {
+interface IButtonProps {
+  click?: any
+}
+
+@Component
+export default class Button extends tsx.Component<IButtonProps>{
   
-  constructor(props: any) {
-    super(props)
-  }
+  @Prop() public click!: any
   
   mounted () {
-    console.log(this.$slots.default);
-  }
   
+  }
   
   render() {
     return (
-      <div class='button-container'>
+      <div onClick={this.$props.click} class='button-container'>
         <div class='button'>
           <span class='text'>{this.$slots.default}</span>
         </div>

@@ -21,9 +21,6 @@ export async function initialize (params) {
  * @param params
  * @returns {Promise<TResult|TResult2|TResult1>}
  */
-export async function login (params) {
-  return request(`/uc/login`,{
-    method: 'POST',
-    body: params
-  })
+export async function login (params: object) {
+  return request(`/api/login?${stringify(params)}`, {})
 }

@@ -1,23 +1,25 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component, Prop} from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
+
 import './style.less';
 
 const OrderStatus = ['未支付', '已支付', '已分配', '分配失败']
 
 const ColorStatus = ['default', 'success' , 'success' , 'err']
 
-@Component({
-  props: {
-    data: Object
-  }
-})
-export default class OrderComponents extends Vue {
+interface IOrderComponentsProps {
+  data?: object,
+  key?: any
+}
+
+@Component
+export default class OrderComponents extends tsx.Component<IOrderComponentsProps> {
   
-  constructor(props: any) {
-    super(props)
-  }
+  @Prop() public data!: object
+  @Prop() public key!: any
+
   
   render() {
-    console.log(this.$props.data)
     const { orderId, status, time, orderType, payType, deviceId } = this.$props.data;
     const orderInfo = [
       {

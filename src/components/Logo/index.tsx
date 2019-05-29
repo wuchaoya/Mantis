@@ -1,17 +1,16 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component, Prop} from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
+
 import './style.less';
 
-@Component({
-  props: {
-    size: Number,
-    margin: String
-  }
-})
-export default class  extends Vue {
+interface ILogoProps {
+  size?: string
+}
+
+@Component
+export default class Logo extends tsx.Component<ILogoProps> {
   
-  constructor(props: any) {
-    super(props)
-  }
+  @Prop() public size!: string
   
   render() {
     return (

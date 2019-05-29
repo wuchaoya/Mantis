@@ -52,6 +52,11 @@ yarn add postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg post
 
 vue cli 创建的工程自带了css前缀， 后续增加 px 转换 vw vh 将packjson中 autoprefixer 给丢了
 
+
+### vue 事件问题
+
+在 vue 中 对 props 的名称的大小写没有严格区分, 组件封装时候 onClick 一直警告
+
 ```
 "plugins" : {
       "autoprefixer": {},

@@ -18,7 +18,7 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: BroadcastFlow // 首页播流
+      component: () => import('./views/Home') // 首页播流
     },
   
     {

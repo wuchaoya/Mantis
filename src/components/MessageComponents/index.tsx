@@ -1,17 +1,18 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component, Prop} from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support'
+
 import './style.less';
 
-@Component({
-  props: {
-    data: Object,
-    disabled: Boolean
-  }
-})
-export default class MessageComponents extends Vue {
+interface IMessageComponentsProps {
+  data?: object,
+  disabled?: boolean
+}
+
+@Component
+export default class MessageComponents extends tsx.Component<IMessageComponentsProps> {
   
-  constructor(props: any) {
-    super(props)
-  }
+  @Prop() public data!: object
+  @Prop() public disabled!: boolean
   
   render() {
     const {disabled} = this.$props;

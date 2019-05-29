@@ -5,6 +5,7 @@
   "scripts": {
     "start": "cross-env APP_TYPE=localhost vue-cli-service serve",
     "dev": "cross-env APP_TYPE=dev vue-cli-service serve",
+    "test": "cross-env APP_TYPE=test vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
@@ -17,6 +18,9 @@
     "crypto-js": "^3.1.9-1",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
+    "mmlpx": "^4.0.2",
+    "mobx": "^5.9.4",
+    "mobx-vue": "^2.0.9",
     "muse-ui": "^3.0.2",
     "postcss-aspect-ratio-mini": "^1.0.1",
     "postcss-cssnext": "^3.1.0",
@@ -32,6 +36,7 @@
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.3",
+    "vue-tsx-support": "^2.3.0",
     "vuetypescript-pxtransformationvw-loader": "^1.0.0",
     "vuex": "^3.0.1",
     "webpack-api-mocker": "^1.6.6"

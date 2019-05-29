@@ -4,7 +4,8 @@ const apiMocker = require('webpack-api-mocker');
 const path = require('path')
 
 const host = {
-	dev: 'http://cloud-phone-dev.xiaoyaoyou.com:2096',
+	dev2: 'http://cloud-phone-dev.xiaoyaoyou.com:2096',
+	dev: 'http://172.16.2.220:9700',
 	localhost: 'http://127.0.0.1:8080/api',
 }
 
@@ -38,10 +39,6 @@ const config = process.env.APP_TYPE === 'localhost' ?
 				'/api': {
 					target: host[process.env.APP_TYPE],
 					pathRewrite:{'/api':''}
-				},
-				'/uc': {
-					target: ucHost[process.env.APP_TYPE],
-					pathRewrite:{'/uc':''}
 				},
 			}
 		},

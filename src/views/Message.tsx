@@ -34,7 +34,7 @@ export default class Message extends Vue {
       <div class='order grey card'>
         <Navigation title='消息中心' />
         <List
-          renderItem={(item, index) => <MessageComponents disabled={item.disabled} key={index} data={item} />}
+          renderItem={(item: any, index: number) => <MessageComponents disabled={item.disabled} key={index} data={item} />}
           dataSource={dataSource}
           empty={{description: '还没有消息记录'}} />
       </div>

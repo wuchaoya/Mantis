@@ -1,18 +1,19 @@
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue, Component, Prop } from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
+
 import Icon from '@/components/Icon';
 import './style.less';
 
-@Component({
-  props: {
-    title: String,
-    right: Object
-  }
-})
-export default class Navigation extends Vue {
-  
-  constructor (props : any) {
-     super(props)
-  }
+interface INavigationProps {
+  title?: string,
+  right?: any
+}
+
+@Component
+export default class Navigation extends tsx.Component<INavigationProps> {
+
+  @Prop() public title!: string
+  @Prop() public right!: any
   
   mounted () {
   }

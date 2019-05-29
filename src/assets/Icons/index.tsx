@@ -1,17 +1,18 @@
-import {Vue, Component} from 'vue-property-decorator';
+import {Component, Prop} from 'vue-property-decorator';
+import * as tsx from "vue-tsx-support";
 
-@Component({
-  props: {
-    backgroundColor: String,
-    color: String,
-    size: String,
-    name: String
-  }
-})
+interface IIconProps {
+  name: string,
+  backgroundColor?: string,
+  size?: string,
+  color?: string
+}
 
-
-export default class Icons extends Vue {
-  
+@Component
+export default class Icons extends tsx.Component<IIconProps> {
+  @Prop() public name!: string;
+  @Prop() public backgroundColor!: string;
+  @Prop() public size!: string;
   constructor(props: any) {
     super(props)
   }

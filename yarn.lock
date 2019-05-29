@@ -5368,7 +5368,7 @@ lower-case@^1.1.1:
   resolved "https://registry.npm.taobao.org/lower-case/download/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
   integrity sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
 
-lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.2:
+lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.2, lru-cache@^4.1.5:
   version "4.1.5"
   resolved "https://registry.npm.taobao.org/lru-cache/download/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
   integrity sha1-i75Q6oW+1ZvJ4z3KuCNe6bz0Q80=
@@ -5644,6 +5644,30 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+mmlpx@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/mmlpx/-/mmlpx-4.0.2.tgz#816000f408e50e815e547d6251430ba6571dfb7a"
+  integrity sha512-cf2mZ4rTFCsASchhAvAkimjVLDMwQ+SeErxFqQK0zbSRDH2lkSzQlWxVnjL+eGO2Nh0ehqiKlaN9/emN/EU6XQ==
+  dependencies:
+    lodash "^4.17.4"
+    lru-cache "^4.1.5"
+    reflect-metadata "^0.1.12"
+    tslib "^1.9.0"
+    util "^0.11.1"
+    uuid "^3.1.0"
+
+mobx-vue@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.npmjs.org/mobx-vue/-/mobx-vue-2.0.9.tgz#656c8c4810f5f31b83eab806c350babb5b862fa1"
+  integrity sha512-7LUusULoEt4+A9/qBaTH/Y/SSYcKFw92lxQk+8mloSi/M/xNhR/Q2fnTEMWzyD/uY4B6VpVfJTejRmDAhcCbHg==
+  dependencies:
+    tslib "^1.9.0"
+
+mobx@^5.9.4:
+  version "5.9.4"
+  resolved "https://registry.npmjs.org/mobx/-/mobx-5.9.4.tgz#1dee92aba33f67b7baeeb679e3bd376a12e55812"
+  integrity sha512-L9JjTX2rtQUAhCIgnHokfntNOsF14uioT9LqStf6Mya+16j56ZBe21E8Y9V59tfr2aH2kLQPD10qtCJXBuTAxw==
 
 mocha-webpack@^2.0.0-beta.0:
   version "2.0.0-beta.0"
@@ -7450,6 +7474,11 @@ reduce-function-call@^1.0.1, reduce-function-call@^1.0.2:
   dependencies:
     balanced-match "^0.4.2"
 
+reflect-metadata@^0.1.12:
+  version "0.1.13"
+  resolved "https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
+
 regenerate-unicode-properties@^8.0.2:
   version "8.1.0"
   resolved "https://registry.npm.taobao.org/regenerate-unicode-properties/download/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
@@ -8878,7 +8907,7 @@ util@0.10.3:
   dependencies:
     inherits "2.0.1"
 
-util@^0.11.0:
+util@^0.11.0, util@^0.11.1:
   version "0.11.1"
   resolved "https://registry.npm.taobao.org/util/download/util-0.11.1.tgz#3236733720ec64bb27f6e26f421aaa2e1b588d61"
   integrity sha1-MjZzNyDsZLsn9uJvQhqqLhtYjWE=
@@ -8895,7 +8924,7 @@ utils-merge@1.0.1:
   resolved "https://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.0.1, uuid@^3.3.2:
+uuid@^3.0.1, uuid@^3.1.0, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha1-G0r0lV6zB3xQHCOHL8ZROBFYcTE=
@@ -9002,6 +9031,11 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
+
+vue-tsx-support@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/vue-tsx-support/-/vue-tsx-support-2.3.0.tgz#dd82f37f005a80a262bbe79dfefaa29baf88a147"
+  integrity sha512-0ARqgRVWsGXe7asKmE3f78zgIkLnLM2eQHn5w+GLyf8E/PV2OMFG5Q6exdfpekLwRhbALPsRPxc51bjWgDm7UA==
 
 vue@^2.6.10:
   version "2.6.10"

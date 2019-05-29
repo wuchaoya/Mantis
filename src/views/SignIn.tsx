@@ -1,44 +1,39 @@
 import { Vue, Component } from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
+
 import Navigation from '@/components/Navigation';
 import Logo from '@/components/Logo';
 import Input from '@/components/Input';
 import Headline from '@/components/Headline';
 import Button from '@/components/Button';
 
-import { initialize } from '@/services/api';
-import {login} from '@/services/accountRelated';
+import { Observer } from "mobx-vue";
+import SigninStory from '@/store/SigninStore';
 
-@Component({
-  props: {
-    name: String,
-    pathName: String,
-    events: Function
-  }
-})
-export default class SignIn extends Vue {
+@Observer
+@Component
+export default class SignIn extends tsx.Component<any> {
   
   constructor (props : any) {
     super(props)
   }
   
+  state = SigninStory
+  
   async mounted () {
-    console.log(this.$store)
-    await initialize({})
-    await login({
-      account:'18695912990',
-      password:'123456',
-    })
+  
   }
   
   render () {
     return (
       <div class='card'>
         <Navigation title='登录' right={<span class='text'>注册</span>}/>
-        <Logo size={80} margin='36px'/>
-        <Input iconName='signIn' placeholder='请输入您的账号' />
-        <Input iconName='passWord' type='password' placeholder='请输入您的密码' />
+        <Logo />
+        <Input change={(e: any) => this.state.inputOnChange(e.target.value, 'account')} value={this.state.accountInfo.account} iconName='signIn' placeholder='请输入您的账号' />
+        <Input change={(e: any) => this.state.inputOnChange(e.target.value, 'password')} value={this.state.accountInfo.password} iconName='passWord' type='password' placeholder='请输入您的密码' />
         <Headline />
-        <Button>登录</Button>
+        <Button click={() => this.state.login()}>登录</Button>
+        {this.state.accountInfo.password}
       </div>
     )
   }
