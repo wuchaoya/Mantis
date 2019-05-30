@@ -9,11 +9,16 @@ import EntryList from '@/components/Entry/EntryList';
 import Menu from '@/components/Menu';
 import Icon from '@/components/Icon';
 import Button from '@/components/Button';
+import Swipers from '@/components/Swiper/Swiper2.vue';
+import NoticeBar from '@/components/NoticeBar/NoticeBar.vue';
+
 
 import SigninStory from '@/store/SigninStore';
 import HomeStore from '@/store/HomeStore';
 
 import '@/style/home.less';
+
+
 
 @Observer
 @Component
@@ -39,6 +44,8 @@ export default class Home extends Vue {
           <Menu />
           <Button className='signOut-button'>退出登录</Button>
         </Drawer>
+        <NoticeBar />
+        <Swipers />
       </div>
     )
   }

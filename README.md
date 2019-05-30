@@ -63,6 +63,8 @@ vue cli 创建的工程自带了css前缀， 后续增加 px 转换 vw vh 将pac
       }
 ```
 
+###
+ ios 8 https://github.com/vuejs/vue-cli/issues/1303
 
 ### 调试
 
@@ -77,3 +79,6 @@ sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-deb
  yarn dev   // 连接dev服务, 接口使用dev环境数据
 
 ```
+$ git remote rm origin
+
+git remote add origin 仓库地址

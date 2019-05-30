@@ -10,7 +10,6 @@ export default class Home extends Vue {
   }
   
   async mounted () {
-    console.log(this.$store)
   }
   
   render () {

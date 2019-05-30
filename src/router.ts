@@ -31,7 +31,12 @@ export default new Router({
       path: '/message',
       name: 'message',
       component: () => import('./views/Message') // 消息中心
-    }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('./views/Test')
+    },
     
   ]
 })
