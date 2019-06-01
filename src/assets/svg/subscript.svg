@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="15px" viewBox="0 0 40 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>推荐框</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.6136199%" id="linearGradient-1">
+            <stop stop-color="#FE9176" offset="0%"></stop>
+            <stop stop-color="#FF6567" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="推荐框" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L34,0 C37.3137085,-6.08718376e-16 40,2.6862915 40,6 L40,15 L6,15 C2.6862915,15 4.05812251e-16,12.3137085 0,9 L0,0 Z" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+    </g>
+</svg>

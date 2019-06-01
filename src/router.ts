@@ -32,6 +32,20 @@ export default new Router({
       name: 'message',
       component: () => import('./views/Message') // 消息中心
     },
+  
+    {
+      path: '/result',
+      name: 'result',
+      component: () => import('./views/Result') // 支付结果
+    },
+  
+    {
+      path: '/package',
+      name: 'package',
+      component: () => import('./views/Package') // 套餐
+    },
+  
+  
     {
       path: '/test',
       name: 'test',

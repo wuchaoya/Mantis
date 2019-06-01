@@ -13,7 +13,7 @@ interface IButtonProps {
 export default class Button extends tsx.Component<IButtonProps>{
   
   @Prop({default: () => {}}) public click!: any
-  @Prop() public styles!: object
+  @Prop() public styles! : object
   @Prop() public className!: string
   
   mounted () {

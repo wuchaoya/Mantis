@@ -68,7 +68,7 @@
         "utf8": false
       },
       "postcss-px-to-viewport": {
-        "viewportWidth": 350,
+        "viewportWidth": 375,
         "unitPrecision": 3,
         "viewportUnit": "vw",
         "selectorBlackList": [
@@ -78,12 +78,7 @@
         "minPixelValue": 1,
         "mediaQuery": false
       },
-      "postcss-viewport-units": {},
-      "cssnano": {
-        "preset": "advanced",
-        "autoprefixer": false,
-        "postcss-zindex": false
-      }
+      "postcss-viewport-units": {}
     }
   },
   "browserslist": [

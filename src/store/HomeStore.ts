@@ -1,5 +1,4 @@
 import { action, computed, observable } from "mobx";
-import router from '@/router';
 
 class HomeStore {
   
@@ -11,14 +10,14 @@ class HomeStore {
   /**
    * 开启抽屉
    */
-  @observable drawerShow () {
+  @action.bound drawerShow () {
     this.drawerVisible = true
   }
   
   /**
    * 隐藏抽屉
    */
-  @observable drawerHide () {
+  @action.bound drawerHide () {
     this.drawerVisible = false
   }
   

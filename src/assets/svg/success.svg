@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>支付成功</title>
+    <desc>Created with Sketch.</desc>
+    <g id="支付成功" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <circle id="Oval" fill="#73D13D" cx="51" cy="51" r="51"></circle>
+            <path d="M31.5477272,58.7279221 L73.5477272,58.7279221 C75.2045815,58.7279221 76.5477272,60.0710678 76.5477272,61.7279221 C76.5477272,63.3847763 75.2045815,64.7279221 73.5477272,64.7279221 L28.5477272,64.7279221 C26.890873,64.7279221 25.5477272,63.3847763 25.5477272,61.7279221 L25.5477272,38.7279221 C25.5477272,37.0710678 26.890873,35.7279221 28.5477272,35.7279221 C30.2045815,35.7279221 31.5477272,37.0710678 31.5477272,38.7279221 L31.5477272,58.7279221 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(51.047727, 50.227922) rotate(-45.000000) translate(-51.047727, -50.227922) "></path>
+        </g>
+    </g>
+</svg>
